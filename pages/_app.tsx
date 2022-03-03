@@ -8,6 +8,7 @@ import theme from '../styles/theme';
 import { AppPropsWithLayout } from '../models';
 import { EmptyLayout } from '../components/layout';
 import { createEmotionCache } from '../utils';
+import { ThemeProvider1 } from '../context/ThemeContext';
 
 const clientSideEmotionCache = createEmotionCache()
 export function MyApp(props: AppPropsWithLayout) {
@@ -27,11 +28,17 @@ export function MyApp(props: AppPropsWithLayout) {
         <title>My App</title>
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       </Head>
+      <ThemeProvider1>
+
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
+        <Layout>
+
         <Component {...pageProps} />
+        </Layout>
       </ThemeProvider>
+      </ThemeProvider1>
     </>
   );
 };
