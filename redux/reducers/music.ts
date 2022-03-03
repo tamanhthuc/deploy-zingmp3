@@ -1,4 +1,4 @@
-import  IsongProps  from '../../types/Song.type';
+import  IsongProps  from 'd:/Project-ZingMP3/zingmp3/types/Song.type';
 import { AnyAction } from 'redux';
 
 interface initialProps {
