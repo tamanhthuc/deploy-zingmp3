@@ -27,7 +27,7 @@ export function MyApp(props: AppPropsWithLayout) {
         <title>My page</title>
         <meta name="viewport" content="initial-scale=1, width=device-width" />
       </Head>
-      <ThemeProvider1>
+      {/* <ThemeProvider1> */}
         <ThemeProvider theme={theme}>
           {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
           <CssBaseline />
@@ -36,7 +36,7 @@ export function MyApp(props: AppPropsWithLayout) {
           {/* </Layout> */}
           <ToastContainer />
         </ThemeProvider>
-      </ThemeProvider1>
+      {/* </ThemeProvider1> */}
     </CacheProvider>
   );
 }
