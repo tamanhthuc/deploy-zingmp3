@@ -33,10 +33,10 @@ export function MyApp(props: AppPropsWithLayout) {
       <ThemeProvider theme={theme}>
         {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
         <CssBaseline />
-        <Layout>
+        
 
         <Component {...pageProps} />
-        </Layout>
+       
       </ThemeProvider>
       </ThemeProvider1>
     </>
