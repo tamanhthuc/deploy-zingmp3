@@ -41,4 +41,5 @@ export function MyApp(props: AppPropsWithLayout) {
   );
 }
 
-export default wrapper.withRedux(MyApp);
+// export default wrapper.withRedux(MyApp);
+export default MyApp;
