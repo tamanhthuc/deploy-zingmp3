@@ -5,9 +5,14 @@ import Head from 'next/head';
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
 import theme from '../styles/theme';
+import { AppPropsWithLayout } from '../models';
+import { EmptyLayout } from '../components/layout';
+import { createEmotionCache } from '../utils';
 
-
-const MyApp: FC<AppProps> = ({ Component, pageProps }: AppProps) => {
+const clientSideEmotionCache = createEmotionCache()
+export function MyApp(props: AppPropsWithLayout) {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+  const Layout = Component.Layout ?? EmptyLayout;
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
