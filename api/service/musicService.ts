@@ -1,4 +1,4 @@
-import Request from '../axios';
+import Request from '../axios/index'
  const musicService = {
     getList:  async function (apiUrl: string) {
 
